@@ -1,2 +1,10 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script>
+    import About from '../components/About.svelte';
+    import Project from '../components/Project.svelte';
+    import { projects } from '../projects'
+</script>
+
+<About />
+{#each projects as project(project)}
+    <Project project={project}/>
+{/each}

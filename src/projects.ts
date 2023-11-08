@@ -1,0 +1,1 @@
+export const projects: string[] = ["Frisbee-Frans", "Elevator Sim", "Library System", "Space Shooter", "Tank Shooter", "Train Collision Problem", "Image to Ascii converter", ];
