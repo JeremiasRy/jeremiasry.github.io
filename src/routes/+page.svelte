@@ -1,13 +1,13 @@
 <script lang="ts">
     import { projects } from "../projects";
-    import Project from "../components/Project.svelte";
+    import ProjectCard from "../Components/ProjectCard.svelte";
 </script>
 <div class="header">
     <h1>Jeremias Ryttäri</h1>
 </div>
 <div class="projects">
-    {#each projects as project}
-        <Project project={project} />
+    {#each projects as project (project)}
+        <ProjectCard project={project} />
     {/each}
 </div>
 <style>
@@ -15,9 +15,6 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        position: sticky;
-        top: 0;
-        left: 0;
         background: linear-gradient(45deg, #2193b0, #6dd5ed);
         margin-bottom: 5em;
         height: 20vh;
