@@ -30,13 +30,3 @@ export const codeLogos = {
     "C#": "https://seeklogo.com/images/C/c-sharp-c-logo-02F17714BA-seeklogo.com.png",
     "typeScript": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg"
 }
-
-export const technologyLogos = {
-    "React": "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg",
-    "Redux": "https://cdn.worldvectorlogo.com/logos/redux.svg",
-    "Material UI": "https://cdn.worldvectorlogo.com/logos/material-ui-1.svg",
-    "Axios": "https://upload.wikimedia.org/wikipedia/commons/d/d1/Axios_%28computer_library%29_logo.svg",
-    "React-Router": "/react-router-stacked-color-inverted.svg",
-    ".NET": "https://raw.githubusercontent.com/dotnet/brand/main/logo/dotnet-logo.png",
-    "PostgreSQL": "https://www.vectorlogo.zone/logos/postgresql/postgresql-vertical.svg",
-}
