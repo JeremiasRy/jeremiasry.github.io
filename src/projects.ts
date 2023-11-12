@@ -3,11 +3,12 @@ export type Project = {
     imgs: string[],
     liveLink: string | null;
     github: string;
-    languages: Languages[];
+    languages: Language[];
     technologies: Technologies[];
+    description: string;
 }
 
-export type Languages = "C#" | "typeScript";
+export type Language = "C#" | "typeScript";
 export type Technologies = "React" | "Redux" | "Material UI" | "Axios" | "React-Router" | ".NET" | "PostgreSQL"
 
 export const projects: Project[] = [
@@ -17,13 +18,53 @@ export const projects: Project[] = [
         liveLink: "jausers", 
         github: "", 
         languages: ["C#", "typeScript"], 
-        technologies: ["React", "Redux", "Material UI", "Axios", "React-Router", ".NET", "PostgreSQL"]
+        technologies: ["React", "Redux", "Material UI", "Axios", "React-Router", ".NET", "PostgreSQL"], description: ""
     }, 
-    {name: "Elevator-Sim", imgs: ["/elevator.gif"], liveLink: null, github: "", languages: ["C#", "typeScript"], technologies: []},
-    {name: "Library", imgs: ["/lib-sys.gif"], liveLink: "jausers", github: "", languages: ["C#", "typeScript"], technologies: []},
-    {name: "Space Shooter", imgs: ["/SpaceAction.gif"], liveLink: "jausers", github: "", languages: ["C#", "typeScript"], technologies: []},
-    {name: "Tank Shooter", imgs: ["/cannon.gif"], liveLink: "jausers", github: "", languages: ["C#", "typeScript"], technologies: []},
-    {name: "Img to ASCII converter", imgs: ["/demo.png"], liveLink: "jausers", github: "", languages: ["C#", "typeScript"], technologies: []},
+    {
+        name: "Elevator-Sim", 
+        imgs: ["/elevator.gif"], 
+        liveLink: null, 
+        github: "", 
+        languages: ["C#"], 
+        technologies: [], 
+        description: ""
+    },
+    {
+        name: "Library", 
+        imgs: ["/lib-sys.gif"], 
+        liveLink: "jausers", 
+        github: "", 
+        languages: ["C#", "typeScript"], 
+        technologies: [], 
+        description: ""
+    },
+    {
+        name: "Space Shooter", 
+        imgs: ["/SpaceAction.gif"], 
+        liveLink: "jausers", 
+        github: "", 
+        languages: ["C#"], 
+        technologies: [], 
+        description: ""
+    },
+    {
+        name: "Tank Shooter", 
+        imgs: ["/cannon.gif"], 
+        liveLink: "jausers", 
+        github: "", 
+        languages: ["C#"], 
+        technologies: [], 
+        description: ""
+    },
+    {
+        name: "Img to ASCII converter", 
+        imgs: ["/demo.png"], 
+        liveLink: "jausers", 
+        github: "", 
+        languages: ["C#", "typeScript"], 
+        technologies: [], 
+        description: ""
+    },
 ];
 
 export const codeLogos = {

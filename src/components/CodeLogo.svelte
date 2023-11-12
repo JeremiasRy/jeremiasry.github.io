@@ -1,7 +1,7 @@
 <script lang="ts">
-    import { codeLogos, type Languages } from "../projects";
+    import { codeLogos, type Language } from "../projects";
 
-    export let language:Languages;
+    export let language:Language;
 </script>
 <div>
     <img src={codeLogos[language]} alt=""/>
