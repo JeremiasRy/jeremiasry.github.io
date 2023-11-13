@@ -23,9 +23,9 @@
   </script>
   
   <div class="carousel" role="list" on:mouseenter={stopAutoPlay} on:mouseleave={startAutoPlay}>
-    {#if images.length > 0}
-    <div class="slide" style="background-image: url({images[currentIndex]})" />
-    {/if}
+      {#if images.length > 0}
+          <div class="slide" style="background-image: url({images[currentIndex]})" />
+      {/if}
   </div>
   
   <style>

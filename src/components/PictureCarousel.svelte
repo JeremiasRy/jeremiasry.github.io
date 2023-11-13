@@ -5,8 +5,6 @@
   
     let currentIndex = 0;
     let interval:number;
-
-    console.log(images)
   
     onMount(() => {
       startAutoScroll();

@@ -47,10 +47,7 @@
         color: green;
         font-size: xx-large;
     }
-
-    a {
-        text-decoration: none;
-    }
+    
     .project-header__languages {
         display: flex;
         flex-direction: row;
