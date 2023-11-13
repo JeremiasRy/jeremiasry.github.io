@@ -1,7 +1,7 @@
 <script lang="ts">
     import { onMount, onDestroy } from 'svelte';
   
-    export let images:String[] = [""];
+    export let images:string[] = [""];
   
     let currentIndex = 0;
     let interval:number;
@@ -40,7 +40,7 @@
     }
   </style>
   
-  <div class="carousel" on:mouseenter={stopAutoScroll} on:mouseleave={startAutoScroll}>
+  <div class="carousel" role="list" on:mouseenter={stopAutoScroll} on:mouseleave={startAutoScroll}>
     {#each images as image, i (image)}
       <img src={image} alt={`Image ${i + 1}`} style={`transform: translateX(-${currentIndex * 100}%)`} />
     {/each}
