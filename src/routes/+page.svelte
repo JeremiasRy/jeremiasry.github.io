@@ -2,6 +2,8 @@
     import { onMount } from "svelte";
     import NavButton from "../Components/NavButton.svelte";
     import ProjectCard from "../Components/ProjectCard.svelte";
+    import About from "../Components/About.svelte";
+    import PictureAccordion from "../Components/PictureAccordion.svelte";
     import { projects } from "../projects";
 
     let activeLink:string ="";
@@ -44,19 +46,12 @@
         handleScroll();
     })
 </script>
+
 <div class="wrapper">
     <div class="header">
         <div class="header__extra-page">
             <div class="header-element" id="MAIN">
-                <div>
-                <h1>About</h1>
-                <p>Professionally I'm competent in <b>postgrSQL</b> - <b>.NET</b> - <b>React-Redux</b> stack. </p>
-                <p>For practice and fun I have written some ASCII games.</p>
-                <p>Current focus is on DSP and C++</p>
-                <p>There's more different projects in my <a href="https://github.com/JeremiasRy" target="_blank"><b>gitHub</b></a> but I think these give already a good representation of my skills.</p>
-                <p>I consider my strong suite to be the background logic of all things. Designing UX/UI needs work (as you can see from this page...)</p>
-                <p>This page was built with svelte.</p>
-                </div>
+                <About/>
             </div>
             <div class="button-to-extra" on:click|preventDefault={onClick} on:keydown|preventDefault={() => {}} tabindex={1} role="button">
                 <div class="arrow">
@@ -65,8 +60,8 @@
             </div>
             <div class="header-element" id="EXTRA">
                 <div>
-                <h1>Jausers</h1>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. At optio dolorem perspiciatis recusandae ipsam dolores esse nobis modi mollitia corrupti illo voluptatibus consectetur rerum nisi sed, numquam culpa illum quo?</p>
+                    <h1>Technologies</h1>
+                    <p class="tech-list">.NET | React | Redux | Svelte | postgreSQL | SQL | Powershell | Bash | node.js | LangChain | SCSS | Entity Framework | Dapper | ASP.NET Core | Axios | react-router | JUCE | MongoDB | ChromaDB | Docker | Azure |</p>
                 </div>
             </div>
             <div class="header-element">
@@ -77,9 +72,7 @@
                 </div>
             </div>
             <div class="header-element">
-                <div>
-                <h1>Technologies</h1>
-                </div>
+                <PictureAccordion />
             </div>
         </div>
     </div>
@@ -89,10 +82,15 @@
         {/each}
     </div>
 </div>
-<style>
 
+<style>
     h1 {
         text-align: center;
+    }
+
+    .tech-list {
+        font-weight: 700;
+        font-size: large;
     }
 
     .arrow {
@@ -109,10 +107,11 @@
         justify-content: center;
         align-items: center;
         transition: 100ms all ease-in;
-        background-color: grey;
+        background-color: rgba(128, 128, 128, 0.5);
     }
     .button-to-extra:hover {
         cursor: pointer;
+        background-color: grey;
     }
     .button-to-extra:hover .arrow {
         transform: scale(1.5);
@@ -131,6 +130,7 @@
         box-sizing: border-box;
         padding: 2em;
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         z-index: 1;
@@ -144,17 +144,17 @@
     }
 
     .header::before {
-        content: "";
         position: absolute;
-        left: 0;
         top: 0;
-        width: 100vw;
-        height: 100vh;
-        background-image: URL('/background-header.jpeg');
+        left: 0;
+        content: "";
+        background-image: URL("/background-header.jpeg");
         background-repeat: no-repeat;
-        background-size: contain;
-        opacity: 0.2;
+        background-size: cover;
         z-index: -1;
+        opacity: 0.05;
+        width: 200%;
+        height: 100vh;
     }
 
     .header {
@@ -174,12 +174,13 @@
 
     .projects {
         width: 62%;
-        padding: 1em 1em 1em 6%;
         box-sizing: border-box;
         display: flex;
         flex-direction: column;
+        padding: 1em 1em 1em 6%;
         gap: 1em;
         background-color:rgb(160, 159, 95);
+        z-index: 1;
     }
 
     .navigation {
@@ -189,8 +190,6 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding: 2em;
         gap: 0.5em;
-        background-color:rgba(160, 159, 95, 0.2);
     }
 </style>

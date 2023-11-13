@@ -1,6 +1,8 @@
 <script lang="ts">
     import type { Project } from "../projects";
     import CodeLogo from "./CodeLogo.svelte";
+    import GithubLink from "./GithubLink.svelte";
+    import PictureCarousel from "./PictureCarousel.svelte";
 
     export let project:Project;
 
@@ -13,16 +15,42 @@
         {#each project.languages as language}
             <CodeLogo language={language}/>
         {/each}
+        <GithubLink href={project.github}/> <br/>
+        </div>
     </div>
+    <div class="project-description">
+        <p>
+        {project.description}
+        </p>
     </div>
-    <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-        Numquam consequuntur, officiis non odit ratione aspernatur maxime, 
-        corporis rem a corrupti, recusandae quisquam ipsam molestias magni tempora quae? Illum, 
-        iste reprehenderit!
-    </p>
+    <div class="project-details-wrapper">
+        <div class="project-details-wrapper__left">
+            <div class="links">
+                {#if project.liveLink}
+                    <a href={project.liveLink}><span class="live-demo">&bullet;</span> Live Demo</a>
+                {/if}
+            </div>
+            <div>
+                <h1>Techs used</h1>
+                {#each project.technologies as technology}
+                    <p>- {technology}</p>
+                {/each}
+            </div>
+        </div>
+        <div class="project-details-wrapper__right">
+            <PictureCarousel images={project.imgs}/>
+        </div>
+    </div>
 </div>
 <style>
+    .live-demo {
+        color: green;
+        font-size: xx-large;
+    }
+
+    a {
+        text-decoration: none;
+    }
     .project-header__languages {
         display: flex;
         flex-direction: row;
@@ -32,7 +60,7 @@
     .project-header {
         display: flex;
         flex-direction: row;
-        gap: 2em
+        gap: 2em;
     }
     .project-wrapper {
         margin: 2em;
@@ -43,6 +71,20 @@
         border-radius: 0.8em;
         box-shadow: 0 2px 4px rgba(241, 240, 240), 0 4px 8px rgba(240, 239, 239);
         transition: all 200ms ease;
+    }
+    .project-description {
+        padding-left: 1em;
+    }
+    .project-details-wrapper {
+        display: flex; 
+        flex-direction: row;
+    }
+
+    .project-details-wrapper__left {
+        width: 30%;
+    }
+    .project-details-wrapper__right {
+        width: 70%;
     }
 
     .active {
