@@ -50,17 +50,17 @@
             <div class="header-element" id="MAIN">
                 <div>
                 <h1>About</h1>
-                <p>I'm a fullstack developer but I'm aiming to become a full-fledged software developer with no fear of different technologies and languages.</p>
                 <p>Professionally I'm competent in <b>postgrSQL</b> - <b>.NET</b> - <b>React-Redux</b> stack. </p>
                 <p>For practice and fun I have written some ASCII games.</p>
                 <p>Current focus is on DSP and C++</p>
-                <p>There's more different projects in my gitHub but I think these give already a good representation of my skills.</p>
+                <p>There's more different projects in my <a href="https://github.com/JeremiasRy" target="_blank"><b>gitHub</b></a> but I think these give already a good representation of my skills.</p>
                 <p>I consider my strong suite to be the background logic of all things. Designing UX/UI needs work (as you can see from this page...)</p>
                 <p>This page was built with svelte.</p>
                 </div>
             </div>
             <div class="button-to-extra" on:click|preventDefault={onClick} on:keydown|preventDefault={() => {}} tabindex={1} role="button">
                 <div class="arrow">
+                {">   <"}
                 </div>
             </div>
             <div class="header-element" id="EXTRA">
@@ -133,6 +133,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        z-index: 1;
     }
 
     .wrapper {
@@ -140,6 +141,20 @@
         width: 100%;
         display: flex;
         flex-direction: row;
+    }
+
+    .header::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        background-image: URL('/background-header.jpeg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        opacity: 0.2;
+        z-index: -1;
     }
 
     .header {
@@ -151,6 +166,7 @@
         width: 38%;
         height: 100vh;
         box-sizing: border-box;
+        z-index: 1;
     }
     .header::-webkit-scrollbar {
         display: none;
@@ -175,6 +191,6 @@
         align-items: center;
         padding: 2em;
         gap: 0.5em;
-        background-color:rgba(160, 159, 95, 0.288);
+        background-color:rgba(160, 159, 95, 0.2);
     }
 </style>
