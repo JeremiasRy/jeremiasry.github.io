@@ -12,7 +12,7 @@ const config = {
 			fallback: '404.html'
 		}),
 		paths: {
-			base: "/jeremiasry.github.io/"
+			base: "/jeremiasry.github.io"
 		}
 	}
 };
