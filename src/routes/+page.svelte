@@ -1,9 +1,9 @@
 <script lang="ts">
     import { onMount } from "svelte";
-    import NavButton from "../Components/NavButton.svelte";
-    import ProjectCard from "../Components/ProjectCard.svelte";
-    import About from "../Components/About.svelte";
-    import PictureAccordion from "../Components/PictureAccordion.svelte";
+    import NavButton from "$lib/Components/NavButton.svelte";
+    import ProjectCard from "$lib/Components/ProjectCard.svelte";
+    import About from '$lib/Components/About.svelte';
+    import PictureAccordion from "$lib/Components/PictureAccordion.svelte";
     import { projects } from "../projects";
 
     let activeLink:string ="";
@@ -51,7 +51,7 @@
     <div class="header">
         <div class="header__extra-page">
             <div class="header-element" id="MAIN">
-                <About/>
+                <About />
             </div>
             <div class="button-to-extra" on:click|preventDefault={onClick} on:keydown|preventDefault={() => {}} tabindex={1} role="button">
                 <div class="arrow">

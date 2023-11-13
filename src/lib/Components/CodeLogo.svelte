@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { codeLogos, type Language } from "../projects";
+    import { codeLogos, type Language } from "../../projects";
 
     export let language:Language;
 </script>

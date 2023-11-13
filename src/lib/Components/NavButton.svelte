@@ -1,5 +1,5 @@
 <script lang="ts">
-    import type { Project } from "../projects";
+    import type { Project } from "../../projects";
 
     export let to:Project;
 

@@ -1,5 +1,5 @@
 <script lang="ts">
-    import type { Project } from "../projects";
+    import type { Project } from "../../projects";
     import CodeLogo from "./CodeLogo.svelte";
     import GithubLink from "./GithubLink.svelte";
     import PictureCarousel from "./PictureCarousel.svelte";
