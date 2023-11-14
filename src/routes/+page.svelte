@@ -107,14 +107,15 @@
         justify-content: center;
         align-items: center;
         transition: 100ms all ease-in;
-        background-color: rgba(128, 128, 128, 0.5);
+        color: rgba(0, 0, 0, 0.5);
     }
     .button-to-extra:hover {
         cursor: pointer;
-        background-color: grey;
     }
     .button-to-extra:hover .arrow {
         transform: scale(1.5);
+        color: rgba(0, 0, 0, 1);
+        letter-spacing: 0.25em;
     }
     .header__extra-page {
         width: 200%;
@@ -152,7 +153,7 @@
         background-repeat: no-repeat;
         background-size: cover;
         z-index: -1;
-        opacity: 0.05;
+        opacity: 0.1;
         width: 200%;
         height: 100vh;
     }

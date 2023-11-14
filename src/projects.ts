@@ -54,7 +54,7 @@ export const projects: Project[] = [
         liveLink: null, 
         github: "https://github.com/JeremiasRy/CannonGameWithGravity", 
         languages: ["C#"], 
-        technologies: [], 
+        technologies: [".NET"], 
         description: "Next project after the space shooter. Was trying to impement some physics and got decent results. Once again good practice on raw problem solving."
     },
     {
@@ -64,7 +64,7 @@ export const projects: Project[] = [
         github: "https://github.com/JeremiasRy/img-to-ascii-fullstack", 
         languages: ["C#", "typeScript"], 
         technologies: ["React", ".NET"], 
-        description: "Full-stack is not a good platform for this kind of image conversion, but I wanted to practice sending images over TCP. Lessons learnt is that you don't want to let the requests hang when doin the conversion but should make it into a background task and send a SSE to frontend when it's done."
+        description: "Full-stack is not a good platform for this kind of image conversion, but I wanted to practice sending images over TCP. Lessons learnt is that you don't want to let the requests hang when doing the conversion but should make it into a background task and send a SSE to frontend when it's done."
     },
 ];
 
