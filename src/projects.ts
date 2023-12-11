@@ -15,7 +15,7 @@ export const projects: Project[] = [
     {
         name: "Frisbee-Frans", 
         imgs: ["/friba.jpg", "/friba-2.jpg", "/friba-3.jpg"], 
-        liveLink: "https://staticfrisbeefront.z13.web.core.windows.net/", 
+        liveLink: null, 
         github: "https://github.com/JeremiasRy/frisbee-frans", 
         languages: ["C#", "typeScript"], 
         technologies: ["React", "Redux", "Material UI", "Axios", "React-Router", ".NET", "PostgreSQL", "Powershell" , "Entity Framework"], 
