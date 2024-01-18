@@ -1,6 +1,5 @@
 <div>
     <h1>About</h1>
-    <p>Professionally I'm competent in <b>postgrSQL</b> - <b>.NET</b> - <b>React-Redux</b> stack. </p>
     <p>For practice and fun I have written some ASCII games.</p>
     <p>Current focus is on DSP and C++</p>
     <p>There's more different projects in my <a href="https://github.com/JeremiasRy" target="_blank"><b>gitHub</b></a> but I think these give a good representation of my skills.</p>
